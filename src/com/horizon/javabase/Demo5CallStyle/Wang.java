@@ -8,11 +8,11 @@ public class Wang  implements Demo5CallBack{
      * 小李对象的引用
      * 相当于----->背景二
      */
-    private Li mLi;
+    private final Li mLi;
 
     /**
      * 小王的构造方法，持有小李的引用
-     * @param li
+     * @param li 小李
      */
     public Wang(Li li){
         this.mLi = li;
