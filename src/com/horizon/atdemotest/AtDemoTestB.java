@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.*;
 
-@Target({TYPE,METHOD,FIELD,CONSTRUCTOR})//将能够获得的类型，跟C语言的stdarg.h头文件很想。
+@Target({TYPE,METHOD,FIELD,CONSTRUCTOR,PARAMETER,TYPE_PARAMETER})//将能够获得的类型，跟C语言的stdarg.h头文件很想。
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AtDemoTestB {
     String name();

@@ -7,10 +7,12 @@ import java.util.Map;
 
 //Use Class Annotation
 @AtDemoTestB(name="type", gid=Long.class) //类成员注解
-public class UserAnnotationB {
+public class UserAnnotationB<@AtDemoTestB(name="type", gid=Long.class) JJK> {
     //    Use Class Var Annotation
     @AtDemoTestB(name="param",id = 1, gid = Long.class) //使用了类成员注解
     private Integer age;
+    @AtDemoTestB(name="param",id = 2, gid = Long.class) //使用了类成员注解
+    private Integer df;
     //    Use Vector Annotation
     @AtDemoTestB(name="construct",id = 2, gid = Long.class) //使用了构造方法注解
     public UserAnnotationB(){
@@ -23,7 +25,7 @@ public class UserAnnotationB {
     }
 
     @AtDemoTestB(name = "protected method",id=4, gid = Long.class)
-    protected void b(){
+    protected void b(@AtDemoTestB(name = "jdf", id = 1, gid = long.class) int df){
         Map m = new HashMap(0);
     }
     @AtDemoTestB(name = "private method",id=5, gid = Long.class)
